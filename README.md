@@ -58,3 +58,11 @@ mvn package
 ```
 
 Output JAR: `target/CookieCamera-1.1.0.jar`
+
+## Support & Community
+
+- **Discord**: https://discord.gg/NZycRMWrSS
+
+---
+
+*Made with love and care by **Java-Cookieee** & AI.*
