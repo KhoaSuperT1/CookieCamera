@@ -6,6 +6,9 @@ A smooth in-game cinematic cutscene plugin for **Paper, Purpur, Leaf, and Folia 
 > Updated fork/build based on **AnkiCamera** by AnkiTeam:
 > https://modrinth.com/plugin/ankicamera
 
+> **⚠️ Notice (~80% AI-Assisted Code):**
+> Roughly **80%** of the recovery, refactoring, and 1.21–1.26.3 update work was done with AI assistance. Please test on a staging server before running on a live production server.
+
 ## Features
 
 - **Minecraft 1.21 – 1.26.3** compatible (single Java 21 release JAR tested against 1.21.4 and 26.3 APIs).
