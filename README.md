@@ -1,51 +1,75 @@
+<div align="center">
+
 # CookieCamera
 
-A smooth in-game cinematic cutscene plugin for **Paper, Purpur, Leaf, and Folia (Minecraft 1.21 – 1.26.3)** powered by PacketEvents.
+**In-game cinematic cutscenes, spline camera paths, triggers, and point scripts for Paper, Purpur, Leaf, and Folia.**
 
-> **Original Code Credit:**
-> Updated fork/build based on **AnkiCamera** by AnkiTeam:
-> https://modrinth.com/plugin/ankicamera
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21--1.26.3-16a34a?style=flat-square)](https://papermc.io)
+[![Java](https://img.shields.io/badge/Java-21%20%7C%2025-ea580c?style=flat-square)](https://adoptium.net)
+[![PacketEvents](https://img.shields.io/badge/PacketEvents-2.11%E2%80%932.14-2563eb?style=flat-square)](https://modrinth.com/plugin/packetevents)
+[![Version](https://img.shields.io/badge/Version-1.1.0-334155?style=flat-square)](https://github.com/KhoaSuperT1/CookieCamera)
 
-> **⚠️ Notice (~80% AI-Assisted Code):**
-> Roughly **80%** of the recovery, refactoring, and 1.21–1.26.3 update work was done with AI assistance. Please test on a staging server before running on a live production server.
+[Original Project (AnkiCamera)](https://modrinth.com/plugin/ankicamera) · [Support Discord](https://discord.gg/NZycRMWrSS)
+
+</div>
+
+---
+
+> [!NOTE]
+> **Origin & AI Notice:**
+> CookieCamera is an updated fork/build based on [AnkiCamera by AnkiTeam](https://modrinth.com/plugin/ankicamera).
+> Roughly **80%** of the source recovery, cleanup, and `1.21 – 1.26.3` update work was done with AI assistance. Please test your scenes and triggers on a staging server before running them in production.
+
+## Overview
+
+CookieCamera lets you build and preview cutscenes directly inside Minecraft using hotbar tools or movement recording, without asking players to install any client mods. Attach titles, sounds, commands, or custom scripts to individual points and trigger scenes by region, block interaction, or command.
+
+### Changes in v1.1.0
+
+- Verified compatibility for **Minecraft 1.21 – 1.26.3** (Java 21 on 1.21.x, Java 25 on 26.x).
+- Updated PacketEvents integration for **PacketEvents 2.14.0** (while remaining compatible with `2.11.2+`).
+- Fixed double-Shift cutscene skipping on **1.21.6 – 1.26.3** by tracking `Client.PLAYER_INPUT` rising edges alongside `Client.ENTITY_ACTION`.
+- Switched script/trigger console command dispatch and point teleports to Folia-safe schedulers.
+- Hardened `Registry.SOUNDS` lookups so custom or namespaced sound keys fall back cleanly.
 
 ## Features
 
-- **Minecraft 1.21 – 1.26.3** compatible (single Java 21 release JAR tested against 1.21.4 and 26.3 APIs).
-- **Paper, Purpur, Leaf, and Folia** support (`folia-supported: true`).
-- **Smooth Camera Paths**: `CATMULL_ROM`, `BSPLINE`, `HERMITE`, and `LINEAR` interpolation with configurable easing, tension, and smoothing.
-- **In-Game Hotbar Editor**: Build and preview scenes directly in-game with `/cc edit <scene>`, movement recording (`/cc rec start`), and particle path previews (`/cc path`).
-- **Point Actions**: Attach `TITLE`, `ACTIONBAR`, `SOUND`, `MSG`, `CMD`, `PLAYERCMD`, and `SCRIPT` actions to individual points.
-- **Trigger System**: Automatically start scenes on `REGION_ENTER`, `RIGHT_CLICK_BLOCK`, or `COMMAND` with cooldowns, one-time flags, and permission checks.
-- **1.21.6 – 1.26.3 Double-Shift Skip**: Supports both legacy `ENTITY_ACTION` and modern `PLAYER_INPUT` sneak packets.
-- **Import / Export & Localization**: Portable scene files (`exports/` and `imports/`) with built-in English (`en_US`) and Vietnamese (`vi_VN`) language files.
+- **Interpolation & Easing:** `CATMULL_ROM`, `BSPLINE`, `HERMITE`, and `LINEAR` paths with configurable speed, tension, and smoothing.
+- **Hotbar Editor & Recording:** Edit scenes visually with `/cc edit <scene>`, auto-record points while flying (`/cc rec start`), and toggle particle path previews (`/cc path`).
+- **Point Actions:** Attach `TITLE`, `ACTIONBAR`, `SOUND`, `MSG`, `CMD`, `PLAYERCMD`, or `SCRIPT` actions to any point.
+- **Triggers:** Run scenes on `REGION_ENTER`, `RIGHT_CLICK_BLOCK`, or `COMMAND` with cooldowns, one-time flags, and permission checks.
+- **Import / Export & Languages:** Portable scene files under `exports/` and `imports/`, plus built-in `en_US` and `vi_VN` translations.
+- **Folia Support:** Uses entity, global, and async schedulers (`folia-supported: true`).
 
 ## Requirements
 
-- **Server**: Paper, Purpur, Leaf, or Folia **1.21 – 1.26.3**
-- **Java**: Java 21+ (Java 25 for 26.1–26.3)
-- **Dependency**: [PacketEvents](https://modrinth.com/plugin/packetevents) (`2.11.2+` for 1.21.x, `2.14.0+` for 26.1–26.3)
+| Requirement | Version |
+| :--- | :--- |
+| Server Platform | Paper, Purpur, Leaf, or Folia (`1.21 – 1.26.3`) |
+| Java Runtime | Java 21+ (Java 25 for `26.1 – 26.3`) |
+| Required Plugin | [PacketEvents](https://modrinth.com/plugin/packetevents) (`2.11.2+` for 1.21.x, `2.14.0+` for 26.x) |
 
-## Main Commands
+## Commands & Permissions
 
 Primary command: `/cookiecamera` (alias: `/cc`)
 
-- `/cc help [page]` — Show built-in help
-- `/cc reload` — Reload config, language files, scenes, triggers, and scripts
-- `/cc new <id>` / `/cc del <id>` / `/cc list [page]` — Manage scenes
-- `/cc edit <id>` / `/cc exit` — Enter or leave in-game hotbar edit mode
-- `/cc add` / `/cc insert <idx>` / `/cc rm <idx>` / `/cc set <idx> <param> [val]` — Manage camera points
-- `/cc rec start` / `/cc rec stop` — Auto-record camera points while moving
-- `/cc play <id> [player|all]` / `/cc pause` / `/cc stop [player|all]` — Control playback
-- `/cc action <idx> add|list|rm ...` — Manage point actions
-- `/cc trigger ...` — Create and configure scene triggers
-- `/cc export <id>` / `/cc import <file>` — Export or import scene files
+| Command Group | Usage |
+| :--- | :--- |
+| General | `/cc help [page]`, `/cc reload` |
+| Scenes | `/cc new <id>`, `/cc del <id>`, `/cc list [page]`, `/cc copy <src> <dst>`, `/cc info [id]`, `/cc reverse <id>`, `/cc smooth <id>` |
+| Editor | `/cc edit <id>`, `/cc exit`, `/cc add`, `/cc insert <idx>`, `/cc rm <idx>`, `/cc clear [id]`, `/cc pt <idx>`, `/cc tp <idx>` |
+| Properties | `/cc set <idx> <duration\|fov\|yaw\|pitch\|x\|y\|z\|ease\|pos> [val]`, `/cc setting <speed\|name\|markers\|mode\|tension\|smoothing> <val>` |
+| Recording & Path | `/cc rec start \| stop`, `/cc path [on\|off]` |
+| Playback | `/cc play <id> [player\|all]`, `/cc pause`, `/cc stop [player\|all]` |
+| Actions & Scripts | `/cc action <idx> list \| rm <actionIdx> \| add <type> <value...>`, `/cc script <name>` |
+| Triggers | `/cc trigger add\|del\|list\|info\|set\|setregion\|setblock\|fire ...` |
+| Import / Export | `/cc export <id>`, `/cc import <file>` |
 
-## Permissions
+Permissions (default `op`; regular players can still watch cutscenes played by triggers or console):
 
-- `cookiecamera.admin` — Full editing, trigger, and reload commands (default `op`)
-- `cookiecamera.play` — Play scenes for yourself (default `op`)
-- `cookiecamera.play.other` — Play scenes for other players (default `op`)
+- `cookiecamera.admin` — Scene editing, triggers, and reload commands
+- `cookiecamera.play` — Play scenes for yourself
+- `cookiecamera.play.other` — Play scenes for other players
 
 ## Building from Source
 
@@ -57,12 +81,12 @@ cd CookieCamera
 mvn package
 ```
 
-Output JAR: `target/CookieCamera-1.1.0.jar`
+Compiled artifact: `target/CookieCamera-1.1.0.jar`
 
-## Support & Community
+## Support
 
-- **Discord**: https://discord.gg/NZycRMWrSS
+- **Discord:** https://discord.gg/NZycRMWrSS
 
 ---
 
-*Made with love and care by **Java-Cookieee** & AI.*
+<div align="center"><sub>Made with love and care by <b>Java-Cookieee</b> &amp; AI.</sub></div>
