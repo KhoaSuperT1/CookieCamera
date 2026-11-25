@@ -1,0 +1,88 @@
+# CookieCamera Configuration
+# Cấu hình CookieCamera
+
+# Language setting (matches files in lang/, such as en_US or vi_VN)
+# Cài đặt ngôn ngữ (trùng với tên file trong thư mục lang/, ví dụ en_US hoặc vi_VN)
+language: en_US
+
+# Default scene speed (ticks, 20 = 1 second)
+# Tốc độ cảnh mặc định (tick, 20 = 1 giây)
+default-speed-ticks: 40
+
+# Recording interval in record mode (ticks)
+# Khoảng cách ghi điểm trong chế độ ghi (tick)
+record-interval-ticks: 10
+
+# Delay before restoring the player after playback (ticks)
+# Độ trễ trước khi trả người chơi về trạng thái bình thường sau khi phát (tick)
+restore-delay-ticks: 5
+
+# Playback end buffer (ticks, how long to stay at the last point before finishing)
+# Thời gian đệm cuối cảnh (tick, đứng yên ở điểm cuối bao lâu trước khi kết thúc)
+end-buffer-ticks: 30
+
+# Particle visualization settings
+# Cài đặt hiển thị hạt
+particles:
+  # Path particle density (particles per segment)
+  # Mật độ hạt trên đường đi (số hạt mỗi đoạn)
+  path-density: 20
+  # Refresh interval (ticks)
+  # Khoảng làm mới (tick)
+  refresh-interval: 10
+
+# Trigger check interval (ticks, for region triggers)
+# Khoảng kiểm tra trigger (tick, dùng cho trigger vùng)
+trigger-check-interval: 5
+
+# Show the progress bar during playback
+# Hiển thị thanh tiến trình khi phát
+show-progress-bar: true
+
+# Boss bar settings for non-op players during playback
+# Cài đặt boss bar cho người chơi không có OP khi phát
+bossbar:
+  member: true
+
+# Action bar settings for non-op players
+# Cài đặt action bar cho người chơi không có OP
+actionbar:
+  member: true
+
+# Show the scoreboard during playback for non-op players
+# Hiển thị scoreboard khi đang phát cho người chơi không có OP
+scoreboard: true
+
+# Allow players to press Shift twice to skip the cutscene
+# Cho phép người chơi nhấn Shift 2 lần để bỏ qua cutscene
+allow-skip: true
+
+# Edit mode tool configuration
+# Cấu hình công cụ chế độ chỉnh sửa
+# Material names reference: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# Tham khảo tên material: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# Common aliases like EYE_OF_ENDER, BOOK_AND_QUIL, REDTONE_DUST and LARNTERN are supported.
+# Plugin cũng hỗ trợ các alias quen thuộc như EYE_OF_ENDER, BOOK_AND_QUIL, REDTONE_DUST và LARNTERN.
+edit-tools:
+  add-point:
+    material: STICK
+    slot: 0
+  tp-point:
+    material: EYE_OF_ENDER
+    slot: 1
+  play:
+    material: GREEN_CANDLE
+    slot: 2
+  points-list:
+    material: BOOK_AND_QUIL
+    slot: 3
+  rec-toggle:
+    material: REDTONE_DUST
+    slot: 4
+  path-toggle:
+    material: LARNTERN
+    slot: 5
+  exit:
+    material: BARRIER
+    slot: 8
+

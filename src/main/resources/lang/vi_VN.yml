@@ -1,0 +1,201 @@
+# Tệp ngôn ngữ tiếng Việt cho CookieCamera
+# Hỗ trợ định dạng MiniMessage: <green>, <gold>, <gray>...
+# Placeholder dùng định dạng {name}
+
+# Chung
+prefix: "<dark_aqua>[CookieCamera]</dark_aqua> "
+no-permission: "<red>Bạn không có quyền!</red>"
+player-only: "<red>Chỉ người chơi mới dùng được!</red>"
+invalid-number: "<red>Số không hợp lệ!</red>"
+invalid-index: "<red>Chỉ mục không hợp lệ!</red>"
+index-out-of-range: "<red>Chỉ mục vượt phạm vi!</red>"
+
+# Chế độ chỉnh sửa
+edit.enter: "<green>Đã vào chế độ chỉnh sửa: {id}</green>"
+edit.exit: "<green>Đã thoát chế độ chỉnh sửa, vật phẩm đã được khôi phục.</green>"
+edit.not-editing: "<red>Hãy vào chế độ chỉnh sửa trước! /cookiecamera edit <id></red>"
+edit.actionbar: "<gold>✎ Chế độ chỉnh sửa</gold> <dark_gray>|</dark_gray> <gray>{scene}</gray> <dark_gray>|</dark_gray> <gray>{points} điểm</gray>"
+edit.actionbar-recording: "<red>● Đang ghi</red> <dark_gray>|</dark_gray> <gray>{scene}</gray> <dark_gray>|</dark_gray> <gray>{points} điểm</gray>"
+
+# Tên công cụ chỉnh sửa
+tool.add-point: "<gold><bold>Thêm Điểm</bold></gold>"
+tool.add-point-lore: "Nhấp chuột phải để thêm điểm tại vị trí hiện tại"
+tool.tp-point: "<green><bold>Dịch Chuyển Tới Điểm</bold></green>"
+tool.tp-point-lore: "Nhấp chuột phải để dịch chuyển tới điểm tiếp theo"
+tool.play: "<green><bold>Phát Xem Trước</bold></green>"
+tool.play-lore: "Nhấp chuột phải để phát cảnh hiện tại"
+tool.points-list: "<aqua><bold>Xem Các Điểm</bold></aqua>"
+tool.points-list-lore: "Nhấp chuột phải để xem danh sách điểm"
+tool.rec-toggle: "<red><bold>Chế Độ Ghi</bold></red>"
+tool.rec-toggle-lore: "Nhấp chuột phải để bắt đầu/dừng ghi"
+tool.path-toggle: "<yellow><bold>Hiển Thị Đường Đi</bold></yellow>"
+tool.path-toggle-lore: "Nhấp chuột phải để bật/tắt hạt đường đi"
+tool.exit: "<red><bold>Thoát Chỉnh Sửa</bold></red>"
+tool.exit-lore: "Nhấp chuột phải để thoát chế độ chỉnh sửa"
+tool.marker: "Công cụ chỉnh sửa CookieCamera"
+
+# Quản lý cảnh
+scene.created: "<green>Đã tạo cảnh '{id}'!</green>"
+scene.deleted: "<green>Đã xóa cảnh '{id}'!</green>"
+scene.not-found: "<red>Không tìm thấy cảnh!</red>"
+scene.already-exists: "<red>Cảnh '{id}' đã tồn tại!</red>"
+scene.copied: "<green>Đã sao chép {src} -> {dst}</green>"
+scene.reversed: "<green>Đã đảo ngược thứ tự điểm của {id}.</green>"
+scene.no-scenes: "<yellow>Chưa có cảnh nào.</yellow>"
+
+# Quản lý điểm
+point.added: "<green>Đã thêm điểm #{idx} ({pos})</green>"
+point.inserted: "<green>Đã chèn điểm tại #{idx}</green>"
+point.removed: "<green>Đã xóa điểm #{idx}, còn lại {count}</green>"
+point.cleared: "<green>Đã xóa sạch {count} điểm</green>"
+point.tp: "<green>Đã dịch chuyển tới điểm #{idx}</green>"
+point.no-points: "<yellow>Cảnh này chưa có điểm nào.</yellow>"
+point.need-2: "<red>Cảnh cần ít nhất 2 điểm!</red>"
+
+# Phát lại
+play.start: "<green>Đang phát: {id}</green>"
+play.already: "<red>Đang phát rồi!</red>"
+play.stopped: "<green>Đã dừng phát.</green>"
+play.stopped-all: "<green>Đã dừng tất cả lượt phát.</green>"
+play.stopped-player: "<green>Đã dừng phát cho {name}.</green>"
+play.for-player: "<green>Đang phát {id} cho {name}</green>"
+play.for-all: "<green>Đang phát {id} cho {count} người chơi</green>"
+play.finished: "<green>[CookieCamera] Đã phát xong</green>"
+play.paused: "<green>Đã tạm dừng phát.</green>"
+play.resumed: "<green>Đã tiếp tục phát.</green>"
+play.not-playing: "<red>Hiện không phát!</red>"
+play.bossbar: "<gradient:#55FFFF:#FFAA00>{icon} {scene}</gradient> <gray>{percent}%{exit_hint}</gray>"
+play.bossbar-exit-hint: " <yellow>[Nhấn Shift 2 lần để thoát]</yellow>"
+play.exit-hint: "<yellow>Nhấn Shift lần nữa để thoát phát lại</yellow>"
+
+# Ghi
+rec.start: "<green>Đã bắt đầu ghi! Di chuyển để tự động thêm điểm.</green>"
+rec.stop: "<green>Đã dừng ghi, tổng cộng {count} điểm.</green>"
+rec.already: "<yellow>Đang ghi rồi!</yellow>"
+rec.not-recording: "<yellow>Hiện không ghi!</yellow>"
+
+# Cài đặt
+setting.speed: "<green>Tốc độ mặc định = {value}t ({sec}s)</green>"
+setting.name: "<green>Tên cảnh = {value}</green>"
+setting.markers: "<green>Hiển thị marker = {value}</green>"
+setting.mode: "<green>Chế độ nội suy = {value}</green>"
+setting.mode-hint: "<gray>CATMULL_ROM=Đường cong chuẩn BSPLINE=Cực mượt HERMITE=Điều chỉnh độ căng LINEAR=Đường thẳng</gray>"
+setting.tension: "<green>Độ căng = {value} (0=mượt 1=sắc, chỉ cho HERMITE)</green>"
+setting.smoothing: "<green>Độ làm mượt = {value} (0=tắt 0.5=trung bình 0.9=rất mượt)</green>"
+setting.unknown: "<red>Cài đặt không xác định: {param}</red>"
+setting.hint: "<gray>Có thể dùng: speed, name, markers, mode, tension, smoothing</gray>"
+
+# Đường đi
+path.on: "<green>Đã bật hạt đường đi.</green>"
+path.off: "<green>Đã tắt hạt đường đi.</green>"
+path.refresh: "<green>Đã làm mới hạt đường đi.</green>"
+path.toggle: "<yellow>Hạt đường đi: {value}</yellow>"
+
+# Làm mượt
+smooth.done: "<green>Đã làm mượt đường đi: {before} -> {after} điểm</green>"
+smooth.need-3: "<red>Cần ít nhất 3 điểm để làm mượt!</red>"
+
+# Xuất/Nhập
+export.done: "<green>Đã xuất tới exports/{id}.yml</green>"
+export.fail: "<red>Xuất thất bại: {error}</red>"
+import.done: "<green>Đã nhập cảnh '{id}' ({count} điểm)</green>"
+import.not-found: "<red>Không tìm thấy file! Hãy đặt file trong thư mục imports/ hoặc exports/</red>"
+import.invalid: "<red>File cảnh không hợp lệ!</red>"
+
+# Tải lại
+reload.done: "<green>Đã tải lại cấu hình!</green>"
+
+# Script
+script.not-found: "Không tìm thấy khối script '{id}'!"
+
+# Trợ giúp
+help.title: "Trợ giúp"
+help.click-hint: "Nhấp để điền lệnh"
+help.new: "Tạo cảnh mới"
+help.del: "Xóa một cảnh"
+help.list: "Liệt kê tất cả cảnh"
+help.copy: "Sao chép một cảnh"
+help.edit: "Vào chế độ chỉnh sửa"
+help.exit: "Thoát chế độ chỉnh sửa"
+help.add: "Thêm điểm tại vị trí hiện tại"
+help.insert: "Chèn điểm tại vị trí chỉ định"
+help.rm: "Xóa một điểm"
+help.clear: "Xóa toàn bộ điểm"
+help.set: "Sửa tham số điểm"
+help.points: "Xem danh sách điểm"
+help.pt: "Xem chi tiết điểm"
+help.info: "Xem thông tin cảnh"
+help.rec: "Bắt đầu/dừng ghi"
+help.setting: "Chỉnh cài đặt cảnh"
+help.play: "Phát một cảnh"
+help.stop: "Dừng phát"
+help.pause: "Tạm dừng/tiếp tục phát"
+help.path: "Bật/tắt hạt đường đi"
+help.smooth: "Làm mượt đường đi"
+help.reverse: "Đảo thứ tự điểm"
+help.tp: "Dịch chuyển tới điểm"
+help.export: "Xuất cảnh"
+help.import: "Nhập cảnh"
+help.trigger: "Quản lý trigger"
+help.action: "Quản lý sự kiện điểm"
+help.script: "Chạy AC script"
+help.reload: "Tải lại cấu hình"
+
+# Phân trang
+page.prev: "Trước"
+page.next: "Sau"
+page.goto: "Tới trang {page}"
+
+# Giao diện
+ui.enter-edit: "Vào Chỉnh Sửa"
+ui.click-enter-edit: "Nhấp để vào chế độ chỉnh sửa"
+ui.scene-list: "Danh Sách Cảnh"
+ui.click-detail: "Nhấp để xem chi tiết"
+ui.play: "Phát"
+ui.edit: "Sửa"
+ui.delete: "Xóa"
+ui.tools-hint: "Dùng công cụ trên hotbar để chỉnh sửa cảnh"
+ui.detail: "Chi tiết"
+ui.points-list: "Danh Sách Điểm"
+ui.default: "Mặc định"
+ui.point: "Điểm"
+ui.pos-dir: "Vị trí/Hướng"
+ui.set-current: "Đặt vị trí hiện tại"
+ui.set-current-hint: "Đặt điểm bằng vị trí và hướng hiện tại của bạn"
+ui.duration: "Thời lượng"
+ui.reset: "Đặt lại"
+ui.events: "Sự kiện"
+ui.ease: "Easing"
+ui.scene: "Cảnh"
+ui.name: "Tên"
+ui.world: "Thế giới"
+ui.speed: "Tốc độ mặc định"
+ui.total-dur: "Tổng thời lượng"
+ui.point-count: "Số điểm"
+ui.interp-mode: "Nội suy"
+ui.view-points: "Xem Điểm"
+ui.list: "Danh sách"
+ui.player-offline: "Người chơi đang offline"
+
+# Cách dùng sai
+invalid-usage: "<red>Cách dùng: {cmd}</red>"
+
+# Trigger
+trigger.created: "<green>Đã tạo trigger '{id}'!</green>"
+trigger.deleted: "<green>Đã xóa trigger '{id}'!</green>"
+trigger.not-found: "<red>Không tìm thấy trigger!</red>"
+trigger.already-exists: "<red>Trigger '{id}' đã tồn tại!</red>"
+trigger.no-triggers: "<yellow>Chưa có trigger nào.</yellow>"
+trigger.list-title: "Danh Sách Trigger"
+trigger.updated: "<green>Đã cập nhật trigger '{id}': {param} = {value}</green>"
+trigger.region-set: "<green>Đã đặt vùng cho trigger '{id}' quanh vị trí của bạn.</green>"
+trigger.block-set: "<green>Đã đặt khối cho trigger '{id}': {pos}</green>"
+trigger.no-block: "<red>Hãy nhìn vào một khối!</red>"
+trigger.fired: "<green>Đã kích hoạt thủ công: {id}</green>"
+
+# Sự kiện điểm
+action.added: "<green>Đã thêm sự kiện {type} vào điểm #{idx}</green>"
+action.removed: "<green>Đã xóa sự kiện #{idx}</green>"
+action.no-actions: "<yellow>Điểm này không có sự kiện nào.</yellow>"
+action.list-title: "Sự kiện trên điểm #{idx}"
+action.unknown-type: "<red>Loại sự kiện không xác định: {type}. Có thể dùng: TITLE, ACTIONBAR, SOUND, CMD, PLAYERCMD, SCRIPT, MSG</red>"

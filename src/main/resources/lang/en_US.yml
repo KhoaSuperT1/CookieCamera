@@ -1,0 +1,203 @@
+# CookieCamera English Language File
+# Supports MiniMessage format: <green>, <gold>, <gray> etc.
+# Placeholders use {name} format
+
+# General
+prefix: "<dark_aqua>[CookieCamera]</dark_aqua> "
+no-permission: "<red>No permission!</red>"
+player-only: "<red>Players only!</red>"
+invalid-number: "<red>Invalid number!</red>"
+invalid-index: "<red>Invalid index!</red>"
+index-out-of-range: "<red>Index out of range!</red>"
+
+# Edit mode
+edit.enter: "<green>Entered edit mode: {id}</green>"
+edit.exit: "<green>Exited edit mode, inventory restored.</green>"
+edit.not-editing: "<red>Enter edit mode first! /cookiecamera edit <id></red>"
+edit.actionbar: "<gold>✎ Edit Mode</gold> <dark_gray>|</dark_gray> <gray>{scene}</gray> <dark_gray>|</dark_gray> <gray>{points} points</gray>"
+edit.actionbar-recording: "<red>● Recording</red> <dark_gray>|</dark_gray> <gray>{scene}</gray> <dark_gray>|</dark_gray> <gray>{points} points</gray>"
+
+# Edit tool names
+tool.add-point: "<gold><bold>Add Point</bold></gold>"
+tool.add-point-lore: "Right-click to add point at current position"
+tool.tp-point: "<green><bold>Teleport to Point</bold></green>"
+tool.tp-point-lore: "Right-click to teleport to next point"
+tool.play: "<green><bold>Play Preview</bold></green>"
+tool.play-lore: "Right-click to play current scene"
+tool.points-list: "<aqua><bold>View Points</bold></aqua>"
+tool.points-list-lore: "Right-click to view point list"
+tool.rec-toggle: "<red><bold>Record Mode</bold></red>"
+tool.rec-toggle-lore: "Right-click to start/stop recording"
+tool.path-toggle: "<yellow><bold>Path Display</bold></yellow>"
+tool.path-toggle-lore: "Right-click to toggle path particles"
+tool.exit: "<red><bold>Exit Edit</bold></red>"
+tool.exit-lore: "Right-click to exit edit mode"
+tool.marker: "CookieCamera Edit Tool"
+
+# Scene management
+scene.created: "<green>Scene '{id}' created!</green>"
+scene.deleted: "<green>Scene '{id}' deleted!</green>"
+scene.not-found: "<red>Scene not found!</red>"
+scene.already-exists: "<red>Scene '{id}' already exists!</red>"
+scene.copied: "<green>Copied {src} -> {dst}</green>"
+scene.reversed: "<green>Reversed point order of {id}.</green>"
+scene.no-scenes: "<yellow>No scenes yet.</yellow>"
+
+# Point management
+point.added: "<green>Added point #{idx} ({pos})</green>"
+point.inserted: "<green>Inserted point at #{idx}</green>"
+point.removed: "<green>Removed point #{idx}, {count} remaining</green>"
+point.cleared: "<green>Cleared {count} points</green>"
+point.tp: "<green>Teleported to point #{idx}</green>"
+point.no-points: "<yellow>This scene has no points.</yellow>"
+point.need-2: "<red>Scene needs at least 2 points!</red>"
+
+# Playback
+play.start: "<green>Playing: {id}</green>"
+play.already: "<red>Already playing!</red>"
+play.stopped: "<green>Playback stopped.</green>"
+play.stopped-all: "<green>All playback stopped.</green>"
+play.stopped-player: "<green>Stopped playback for {name}.</green>"
+play.for-player: "<green>Playing {id} for {name}</green>"
+play.for-all: "<green>Playing {id} for {count} players</green>"
+play.finished: "<green>[CookieCamera] Playback finished</green>"
+play.paused: "<green>Playback paused.</green>"
+play.resumed: "<green>Playback resumed.</green>"
+play.not-playing: "<red>Not playing!</red>"
+play.bossbar: "<gradient:#55FFFF:#FFAA00>{icon} {scene}</gradient> <gray>{percent}%{exit_hint}</gray>"
+play.bossbar-exit-hint: " <yellow>[Press Shift twice to exit]</yellow>"
+play.exit-hint: "<yellow>Press Shift again to exit playback</yellow>"
+
+# Recording
+rec.start: "<green>Recording started! Move to add points automatically.</green>"
+rec.stop: "<green>Recording stopped, {count} points total.</green>"
+rec.already: "<yellow>Already recording!</yellow>"
+rec.not-recording: "<yellow>Not recording!</yellow>"
+
+# Settings
+setting.speed: "<green>Default speed = {value}t ({sec}s)</green>"
+setting.name: "<green>Scene name = {value}</green>"
+setting.markers: "<green>Markers = {value}</green>"
+setting.mode: "<green>Interpolation mode = {value}</green>"
+setting.mode-hint: "<gray>CATMULL_ROM=Standard BSPLINE=Ultra-smooth HERMITE=Adjustable LINEAR=Straight</gray>"
+setting.tension: "<green>Tension = {value} (0=smooth 1=sharp, HERMITE only)</green>"
+setting.smoothing: "<green>Smoothing = {value} (0=off 0.5=medium 0.9=ultra)</green>"
+setting.unknown: "<red>Unknown setting: {param}</red>"
+setting.hint: "<gray>Available: speed, name, markers, mode, tension, smoothing</gray>"
+
+# Path
+path.on: "<green>Path particles enabled.</green>"
+path.off: "<green>Path particles disabled.</green>"
+path.refresh: "<green>Path particles refreshed.</green>"
+path.toggle: "<yellow>Path particles: {value}</yellow>"
+
+# Smooth
+smooth.done: "<green>Smoothed path: {before} -> {after} points</green>"
+smooth.need-3: "<red>Need at least 3 points to smooth!</red>"
+
+# Export/Import
+export.done: "<green>Exported to exports/{id}.yml</green>"
+export.fail: "<red>Export failed: {error}</red>"
+import.done: "<green>Imported scene '{id}' ({count} points)</green>"
+import.not-found: "<red>File not found! Place in imports/ or exports/ directory</red>"
+import.invalid: "<red>Invalid scene file!</red>"
+
+# Reload
+reload.done: "<green>Config reloaded!</green>"
+
+# Script
+script.not-found: "Script block '{id}' not found!"
+
+# Help messages
+help.title: "Help"
+help.click-hint: "Click to fill command"
+help.new: "Create a new scene"
+help.del: "Delete a scene"
+help.list: "List all scenes"
+help.copy: "Copy a scene"
+help.edit: "Enter edit mode"
+help.exit: "Exit edit mode"
+help.add: "Add point at current position"
+help.insert: "Insert point at index"
+help.rm: "Remove a point"
+help.clear: "Clear all points"
+help.set: "Set point parameter"
+help.points: "View point list"
+help.pt: "View point detail"
+help.info: "View scene info"
+help.rec: "Start/stop recording"
+help.setting: "Modify scene settings"
+help.play: "Play a scene"
+help.stop: "Stop playback"
+help.pause: "Pause/resume playback"
+help.path: "Toggle path particles"
+help.smooth: "Smooth path"
+help.reverse: "Reverse point order"
+help.tp: "Teleport to point"
+help.export: "Export scene"
+help.import: "Import scene"
+help.trigger: "Trigger management"
+help.action: "Point event management"
+help.script: "Run AC script"
+help.reload: "Reload config"
+
+# Pagination
+page.prev: "Prev"
+page.next: "Next"
+page.goto: "Go to page {page}"
+
+# UI text
+ui.enter-edit: "Enter Edit"
+ui.click-enter-edit: "Click to enter edit mode"
+ui.scene-list: "Scene List"
+ui.click-detail: "Click for details"
+ui.play: "Play"
+ui.edit: "Edit"
+ui.delete: "Delete"
+ui.tools-hint: "Use hotbar tools to edit the scene"
+ui.detail: "Detail"
+ui.points-list: "Points List"
+ui.default: "Default"
+ui.point: "Point"
+ui.pos-dir: "Position/Direction"
+ui.set-current: "Set to current"
+ui.set-current-hint: "Set point to your current position and direction"
+ui.duration: "Duration"
+ui.reset: "Reset"
+ui.events: "Events"
+ui.ease: "Easing"
+ui.scene: "Scene"
+ui.name: "Name"
+ui.world: "World"
+ui.speed: "Default Speed"
+ui.total-dur: "Total Duration"
+ui.point-count: "Points"
+ui.interp-mode: "Interpolation"
+ui.view-points: "View Points"
+ui.list: "List"
+ui.player-offline: "Player is offline"
+
+# Invalid usage
+invalid-usage: "<red>Usage: {cmd}</red>"
+
+# Triggers
+trigger.created: "<green>Trigger '{id}' created!</green>"
+trigger.deleted: "<green>Trigger '{id}' deleted!</green>"
+trigger.not-found: "<red>Trigger not found!</red>"
+trigger.already-exists: "<red>Trigger '{id}' already exists!</red>"
+trigger.no-triggers: "<yellow>No triggers yet.</yellow>"
+trigger.list-title: "Trigger List"
+trigger.updated: "<green>Trigger '{id}' updated: {param} = {value}</green>"
+trigger.region-set: "<green>Trigger '{id}' region set to area around you.</green>"
+trigger.block-set: "<green>Trigger '{id}' block set: {pos}</green>"
+trigger.no-block: "<red>Look at a block!</red>"
+trigger.fired: "<green>Manually fired: {id}</green>"
+
+# Point actions
+action.added: "<green>Added {type} event to point #{idx}</green>"
+action.removed: "<green>Removed event #{idx}</green>"
+action.no-actions: "<yellow>No events on this point.</yellow>"
+action.list-title: "Events on point #{idx}"
+action.unknown-type: "<red>Unknown event type: {type}. Available: TITLE, ACTIONBAR, SOUND, CMD, PLAYERCMD, SCRIPT, MSG</red>"
+
+
