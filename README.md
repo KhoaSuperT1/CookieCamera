@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src=".github/logo.jpg" alt="Java-Cookieee" width="180" />
+
 # CookieCamera
 
 **In-game cinematic cutscenes, spline camera paths, triggers, and point scripts for Paper, Purpur, Leaf, and Folia.**
